@@ -3,7 +3,8 @@
 MySQL was used throughout this course with the IED MySQL Workbench. Tableau Public was used for data visualization.
 
 All of the Tableau visualizaitons can be found under my profile: https://public.tableau.com/profile/steven2028#!/
-NOTE: some of these vizzes are interactive. Therefore, I recommend visiting my profile to get the most out of them.
+A dashboard with all tasks can be found at https://public.tableau.com/profile/steven2028#!/vizhome/dashboard_all_tasks/Dashboard1
+NOTE: to give more insight, vizzes are interactive. 
 
 Here are the business questions from the final tasks:
 
