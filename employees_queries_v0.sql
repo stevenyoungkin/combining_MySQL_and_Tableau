@@ -70,16 +70,18 @@ WHERE
 GROUP BY may.dept_name , may.gender , may.calender_year
 ORDER BY may.dept_name , may.calender_year , may.gender;
 
-/* Discussion: My solution is a bit different than in the course. I use WITH clauses here to go ahead and determine the distinct calender years, which employees are managers (and their gender), and which years
-they are active. The last SELECT aggregates the active managers and groups them by department, gender, and the corresponding calender year. In the course, they skip this last part because Tableau will do 
-the aggregation itself once you place the pill inside the rows. However, I like formating the data exactly how I want it already within the RDBMS (if possible) before exporting. Note: in the solution video, the 
-teacher actually demonstrates that Tableau will show the number of managers per gender for whatever year you hover over (in this case 1996). The numbers were the same as what I have, so I'm confident that my 
-solution works.
+/* Discussion: My solution is a bit different than in the course. I use WITH clauses here to go ahead and determine the distinct calender years, 
+which employees are managers (and their gender), and which years they are active. The last SELECT aggregates the active managers and groups them by department, 
+gender, and the corresponding calender year. In the course, they skip this last part because Tableau will do the aggregation itself once you place the pill 
+inside the rows. 
+Note: in the solution video, the teacher actually demonstrates that Tableau will show the number of managers per gender for whatever year you hover 
+over (in this case 1996). The numbers were the same as what I have, so I'm confident that my solution works.
 */
 
 -- --------------------------------------------------------------------------
 
-/* Task 3: Compare the average salary of female versus male employees in the entire company until year 2002, and add a filter allowing you to see that per each department.
+/* Task 3: Compare the average salary of female versus male employees in the entire company until year 2002, and add a filter allowing you to see 
+that per each department.
 */
 
 SELECT 
@@ -99,8 +101,8 @@ GROUP BY d.dept_no , e.gender , calender_year
 HAVING calender_year <= 2002
 ORDER BY d.dept_no;
 
-/* Note: when using a measure in the "Rows" section in Tableau, one must always aggregate the data in a certain way. Additionally, the average salary for all departments
-is computed in Tableau for this exercise. 
+/* Note: when using a measure in the "Rows" section in Tableau, one must always aggregate the data in a certain way. Additionally, the average salary for 
+all departments is computed in Tableau for this exercise.
 */
 
 -- --------------------------------------------------------------------------
